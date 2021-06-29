@@ -1,0 +1,97 @@
+# Copyright (C) 2021 Martin Starosta <LabZone>
+# This file is distributed under the same license as the Foundations plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Foundations 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/foundations\n"
+"Language-Team: Slovenčina\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-05-10T15:25:28+02:00\n"
+"PO-Revision-Date: 2021-05-10 16:32+0000\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: foundations\n"
+"Last-Translator: \n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n>=2 && n<=4 ? 1 : 2);\n"
+"Language: sk_SK"
+
+#. translators: 1: Amount from product price which will be send to foundation.
+#: public/class-foundations-shortcodes.php:58
+msgid "- get %s from each product sold"
+msgstr ""
+
+#. translators: 1: Amount collected by this product sale
+#: public/class-foundations-shortcodes.php:63
+msgid "- total amount collected by selling this product: %s"
+msgstr "- celkom vyzbierané z predaja tohto produktu: %s"
+
+#. translators: 1: Total sum of money collected
+#: public/class-foundations-shortcodes.php:68
+msgid "- total amount collected from all orders: %s."
+msgstr ""
+
+#. translators: 1: Total sum of money collected
+#: public/class-foundations-shortcodes.php:89
+msgid "Colleced total: %s."
+msgstr ""
+
+#. translators: 1: Total sum of money collected
+#: public/class-foundations-shortcodes.php:107
+msgid "Collected by sale of this product: %s."
+msgstr ""
+
+#: admin/class-foundations-admin.php:111
+msgid "Contribution"
+msgstr ""
+
+#: admin/class-foundations-admin.php:102 admin/class-foundations-admin.php:143
+msgid "Foundation"
+msgstr "Nadácia"
+
+#. translators: 1: Name of the organization
+#: public/class-foundations-shortcodes.php:53
+msgid "Foundation name %s"
+msgstr ""
+
+#: admin/class-foundations-admin.php:153
+msgid "foundation_slug"
+msgstr "nadacia"
+
+#. Plugin Name of the plugin
+#: admin/class-foundations-admin.php:67 admin/class-foundations-admin.php:144
+msgid "Foundations"
+msgstr "Nadácie"
+
+#: admin/class-foundations-admin.php:112
+msgid "How much money from this product will go to foundation?"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://labzone.tech"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://labzone.tech/foundations"
+msgstr ""
+
+#. Author of the plugin
+msgid "Martin Starosta <LabZone>"
+msgstr ""
+
+#: admin/class-foundations-admin.php:93
+msgid "Please select foundation"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Plugins adds features to donate part of the product price to foundation "
+"(charity)."
+msgstr ""
+"Plugin, pre zobrazovanie prispevkov pre neziskove organizacie, ktore su "
+"urcene ako cast ceny produktu."
+
+#. translators: 1: Amount will collect from sale of this product.
+#: public/class-foundations-shortcodes.php:123
+msgid "Will get from this product: %s"
+msgstr ""

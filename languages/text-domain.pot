@@ -1,0 +1,111 @@
+# Copyright (C) 2021 Martin Starosta <LabZone>
+# This file is distributed under the same license as the Foundations plugin.
+msgid ""
+msgstr ""
+"Project-Id-Version: Foundations 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/foundations\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-05-24T22:23:23+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.4.0\n"
+"X-Domain: foundations\n"
+
+#. Plugin Name of the plugin
+#: admin/class-foundations-admin.php:67
+#: admin/class-foundations-admin.php:158
+msgid "Foundations"
+msgstr ""
+
+#. Plugin URI of the plugin
+msgid "https://labzone.tech/foundations"
+msgstr ""
+
+#. Description of the plugin
+msgid "Plugins adds features to donate part of the product price to foundation (charity)."
+msgstr ""
+
+#. Author of the plugin
+msgid "Martin Starosta <LabZone>"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://labzone.tech"
+msgstr ""
+
+#: admin/class-foundations-admin.php:93
+msgid "Please select foundation"
+msgstr ""
+
+#: admin/class-foundations-admin.php:102
+#: admin/class-foundations-admin.php:157
+msgid "Foundation"
+msgstr ""
+
+#: admin/class-foundations-admin.php:111
+msgid "Contribute all"
+msgstr ""
+
+#: admin/class-foundations-admin.php:112
+msgid "When checked, whole product price will go to foundation."
+msgstr ""
+
+#: admin/class-foundations-admin.php:122
+#: public/class-foundations-public.php:154
+msgid "Contribution"
+msgstr ""
+
+#: admin/class-foundations-admin.php:123
+msgid "How much money from this product will go to foundation?"
+msgstr ""
+
+#: admin/class-foundations-admin.php:167
+msgid "foundation_slug"
+msgstr ""
+
+#: public/class-foundations-public.php:116
+msgid "You will support these foundations by ordering these products."
+msgstr ""
+
+#. translators: 1: Name of the organization
+#: public/class-foundations-shortcodes.php:62
+msgid "Foundation name %s"
+msgstr ""
+
+#. translators: 1: Amount from product price which will be send to foundation.
+#: public/class-foundations-shortcodes.php:69
+msgid "- get %s from each product sold"
+msgstr ""
+
+#. translators: 1: Amount collected by this product sale
+#: public/class-foundations-shortcodes.php:76
+msgid "- total amount collected by selling this product: %s"
+msgstr ""
+
+#. translators: 1: Total sum of money collected
+#: public/class-foundations-shortcodes.php:84
+msgid "- total amount collected from all orders: %s."
+msgstr ""
+
+#. translators: 1: Total sum of money collected
+#: public/class-foundations-shortcodes.php:111
+msgid "Collected total: %s."
+msgstr ""
+
+#. translators: 1: Total sum of money collected
+#: public/class-foundations-shortcodes.php:131
+msgid "Total collected for all foundations: %s."
+msgstr ""
+
+#. translators: 1: Total sum of money collected
+#: public/class-foundations-shortcodes.php:153
+msgid "Collected by sale of this product: %s."
+msgstr ""
+
+#. translators: 1: Amount will collect from sale of this product.
+#: public/class-foundations-shortcodes.php:174
+msgid "Will get from this product: %s"
+msgstr ""
