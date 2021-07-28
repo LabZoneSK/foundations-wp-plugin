@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2021-05-10T15:25:28+02:00\n"
-"PO-Revision-Date: 2021-05-23 15:38+0000\n"
+"PO-Revision-Date: 2021-07-28 08:59+0000\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: foundations\n"
 "Last-Translator: \n"
@@ -20,7 +20,7 @@ msgstr ""
 #. translators: 1: Amount from product price which will be send to foundation.
 #: public/class-foundations-shortcodes.php:58
 msgid "- get %s from each product sold"
-msgstr ""
+msgstr "- dostane %s z predaja tohto produktu"
 
 #. translators: 1: Amount collected by this product sale
 #: public/class-foundations-shortcodes.php:63
@@ -30,21 +30,21 @@ msgstr "- celkom vyzbierané z predaja tohto produktu: %s"
 #. translators: 1: Total sum of money collected
 #: public/class-foundations-shortcodes.php:68
 msgid "- total amount collected from all orders: %s."
-msgstr ""
+msgstr "- celkom vyzbierané zo všetkých objednávok: %s."
 
 #. translators: 1: Total sum of money collected
 #: public/class-foundations-shortcodes.php:89
 msgid "Colleced total: %s."
-msgstr ""
+msgstr "Vyzbierané celkom: %s."
 
 #. translators: 1: Total sum of money collected
 #: public/class-foundations-shortcodes.php:107
 msgid "Collected by sale of this product: %s."
-msgstr ""
+msgstr "Vyzbierané z predaja tohto produktu: %s"
 
 #: admin/class-foundations-admin.php:111
 msgid "Contribution"
-msgstr ""
+msgstr "Príspevok"
 
 #: admin/class-foundations-admin.php:102 admin/class-foundations-admin.php:143
 msgid "Foundation"
@@ -53,7 +53,7 @@ msgstr "Nadácia"
 #. translators: 1: Name of the organization
 #: public/class-foundations-shortcodes.php:53
 msgid "Foundation name %s"
-msgstr ""
+msgstr "Organizácia %s"
 
 #: admin/class-foundations-admin.php:153
 msgid "foundation_slug"
@@ -66,7 +66,7 @@ msgstr "Nadácie"
 
 #: admin/class-foundations-admin.php:112
 msgid "How much money from this product will go to foundation?"
-msgstr ""
+msgstr "Koľko peňazí pôjde z predaja nadácií?"
 
 #. Author URI of the plugin
 msgid "https://labzone.tech"
@@ -82,7 +82,7 @@ msgstr ""
 
 #: admin/class-foundations-admin.php:93
 msgid "Please select foundation"
-msgstr ""
+msgstr "Prosím, vyberte organizáciu"
 
 #. Description of the plugin
 msgid ""
@@ -95,4 +95,4 @@ msgstr ""
 #. translators: 1: Amount will collect from sale of this product.
 #: public/class-foundations-shortcodes.php:123
 msgid "Will get from this product: %s"
-msgstr ""
+msgstr "Dostane z tohto produktu: %s"

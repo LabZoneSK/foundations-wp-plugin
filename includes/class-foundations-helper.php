@@ -46,7 +46,7 @@ class Foundations_Helper {
 				$total_price             = $item->get_total();
 				$quantity                = $item->get_quantity();
 
-				$contribution = ( ! empty( $contribute_all ) ) ? $total_price : $foundation_contribution;
+				$contribution = ( ! empty( $contribute_all ) ) ? $total_price : ( $total_price - $foundation_contribution );
 
 				if ( ! isset( $contribution_data[ $foundation_id ][ $product_id ] ) ) {
 					$contribution_data[ $foundation_id ][ $product_id ] = $contribution * $quantity;

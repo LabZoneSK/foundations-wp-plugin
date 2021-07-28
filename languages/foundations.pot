@@ -9,14 +9,14 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-05-24T21:43:49+02:00\n"
+"POT-Creation-Date: 2021-07-28T11:25:58+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.4.0\n"
 "X-Domain: foundations\n"
 
 #. Plugin Name of the plugin
 #: admin/class-foundations-admin.php:67
-#: admin/class-foundations-admin.php:158
+#: admin/class-foundations-admin.php:159
 msgid "Foundations"
 msgstr ""
 
@@ -41,7 +41,7 @@ msgid "Please select foundation"
 msgstr ""
 
 #: admin/class-foundations-admin.php:102
-#: admin/class-foundations-admin.php:157
+#: admin/class-foundations-admin.php:158
 msgid "Foundation"
 msgstr ""
 
@@ -53,15 +53,15 @@ msgstr ""
 msgid "When checked, whole product price will go to foundation."
 msgstr ""
 
-#: admin/class-foundations-admin.php:122
-msgid "Contribution"
-msgstr ""
-
 #: admin/class-foundations-admin.php:123
-msgid "How much money from this product will go to foundation?"
+msgid "Product cost"
 msgstr ""
 
-#: admin/class-foundations-admin.php:167
+#: admin/class-foundations-admin.php:124
+msgid "Contribution to foundation is Sale price - Product cost"
+msgstr ""
+
+#: admin/class-foundations-admin.php:168
 msgid "foundation_slug"
 msgstr ""
 
@@ -69,42 +69,46 @@ msgstr ""
 msgid "You will support these foundations by ordering these products."
 msgstr ""
 
+#: public/class-foundations-public.php:155
+msgid "Contribution"
+msgstr ""
+
 #. translators: 1: Name of the organization
-#: public/class-foundations-shortcodes.php:62
+#: public/class-foundations-shortcodes.php:84
 msgid "Foundation name %s"
 msgstr ""
 
 #. translators: 1: Amount from product price which will be send to foundation.
-#: public/class-foundations-shortcodes.php:69
+#: public/class-foundations-shortcodes.php:90
 msgid "- get %s from each product sold"
 msgstr ""
 
 #. translators: 1: Amount collected by this product sale
-#: public/class-foundations-shortcodes.php:76
+#: public/class-foundations-shortcodes.php:97
 msgid "- total amount collected by selling this product: %s"
 msgstr ""
 
 #. translators: 1: Total sum of money collected
-#: public/class-foundations-shortcodes.php:84
+#: public/class-foundations-shortcodes.php:105
 msgid "- total amount collected from all orders: %s."
 msgstr ""
 
 #. translators: 1: Total sum of money collected
-#: public/class-foundations-shortcodes.php:111
+#: public/class-foundations-shortcodes.php:133
 msgid "Collected total: %s."
 msgstr ""
 
 #. translators: 1: Total sum of money collected
-#: public/class-foundations-shortcodes.php:131
+#: public/class-foundations-shortcodes.php:154
 msgid "Total collected for all foundations: %s."
 msgstr ""
 
 #. translators: 1: Total sum of money collected
-#: public/class-foundations-shortcodes.php:153
+#: public/class-foundations-shortcodes.php:177
 msgid "Collected by sale of this product: %s."
 msgstr ""
 
 #. translators: 1: Amount will collect from sale of this product.
-#: public/class-foundations-shortcodes.php:174
+#: public/class-foundations-shortcodes.php:198
 msgid "Will get from this product: %s"
 msgstr ""

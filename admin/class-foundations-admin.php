@@ -120,8 +120,8 @@ class Foundations_Admin {
 			array(
 				'id'          => 'foundation_contribution',
 				'value'       => get_post_meta( get_the_ID(), 'foundation_contribution', true ),
-				'label'       => __( 'Contribution', 'foundations' ) . ' [' . get_woocommerce_currency_symbol() . ']',
-				'description' => __( 'How much money from this product will go to foundation?', 'foundations' ),
+				'label'       => __( 'Product cost', 'foundations' ) . ' [' . get_woocommerce_currency_symbol() . ']',
+				'description' => __( 'Contribution to foundation is Sale price - Product cost', 'foundations' ),
 				'type'        => 'price',
 			)
 		);
