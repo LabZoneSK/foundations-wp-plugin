@@ -117,6 +117,7 @@ class Foundations {
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-foundations-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-foundations-settings.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
@@ -138,12 +139,19 @@ class Foundations {
 	private function define_admin_hooks() {
 
 
-		$plugin_admin = new Foundations_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin    = new Foundations_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_settings = new Foundations_Settings( $this->get_plugin_name(), $this->get_version() );
+
+		/* Admnin Initial Setup */
+		$this->loader->add_action( 'after_setup_theme', $plugin_admin, 'load_carbon_fields' );
 
 		/* Product Settings Tabs */
 		$this->loader->add_filter( 'woocommerce_product_data_tabs', $plugin_admin, 'foundations_product_settings_tabs' );
 		$this->loader->add_action( 'woocommerce_product_data_panels', $plugin_admin, 'foundations_product_panels' );
 		$this->loader->add_action( 'woocommerce_process_product_meta', $plugin_admin, 'foundations_save_product_metadata' );
+
+		/** Settings */
+		$this->loader->add_action( 'carbon_fields_register_fields', $plugin_settings, 'add_settings_page' );
 
 		/* Foundations Post Type */
 		$this->loader->add_action( 'init', $plugin_admin, 'register_foundation_post_type' );

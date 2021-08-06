@@ -69,6 +69,8 @@ class Foundations_Shortcodes {
 		$foundation_id = get_post_meta( $post->ID, 'foundation_id', true );
 		$foundation    = get_post( $foundation_id );
 
+		$show_empty_values = carbon_get_theme_option( 'foundations_show_when_zero' );
+
 		if ( empty( $foundation ) ) {
 			return;
 		}
@@ -97,6 +99,8 @@ class Foundations_Shortcodes {
 				__( '- total amount collected by selling this product: %s', 'foundations' ) . '<br/>',
 				wc_price( $product_contribution )
 			);
+		} else if ( $show_empty_values ) {
+			$message .= __( '- be first to contribute by ordering this product', 'foundations' ) . '<br/>';
 		}
 
 		if ( $total_sold > 0 ) {
@@ -105,7 +109,9 @@ class Foundations_Shortcodes {
 				__( '- total amount collected from all orders: %s.', 'foundations' ),
 				wc_price( $total_sold )
 			);
-		} 
+		} else if ( $show_empty_values ) {
+			$message .= __( '- organization did not raised any money yet. Be their hero!', 'foundations' );
+		}
 
 		$message .= '</p>';
 
@@ -124,7 +130,12 @@ class Foundations_Shortcodes {
 		$data          = $this->helper->foundations_contributions_data();
 		$total_sold    = $this->helper->get_foundation_contribution( $data, $foundation_id );
 
+		$show_empty_values = carbon_get_theme_option( 'foundations_show_when_zero' );
+
 		if ( empty( $foundation_id ) || $total_sold <= 0 ) {
+			if ( $show_empty_values ) {
+				return __( 'There is no contribution, be the first!', 'foundations' );
+			}
 			return;
 		}
 
@@ -145,7 +156,12 @@ class Foundations_Shortcodes {
 		$data       = $this->helper->foundations_contributions_data();
 		$total_sold = $this->helper->get_all_foundations_contribution( $data );
 
+		$show_empty_values = carbon_get_theme_option( 'foundations_show_when_zero' );
+
 		if ( $total_sold <= 0 ) {
+			if ( $show_empty_values ) {
+				return __( 'Nobody has contributed yet. Will you be a hero?', 'foundations' );
+			}
 			return;
 		}
 
@@ -168,7 +184,12 @@ class Foundations_Shortcodes {
 		$data                 = $this->helper->foundations_contributions_data();
 		$product_contribution = $this->helper->get_product_contribution( $data, $foundation_id, $post->ID );
 
+		$show_empty_values = carbon_get_theme_option( 'foundations_show_when_zero' );
+
 		if ( $product_contribution <= 0 ) {
+			if ( $show_empty_values ) {
+				return __( 'There is no contribution from this product, be the first!', 'foundations' );
+			}
 			return;
 		}
 

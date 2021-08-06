@@ -170,4 +170,13 @@ class Foundations_Admin {
 		);
 		register_post_type( 'foundations', $foundations_args );
 	}
+
+	/**
+	 * Registers Caron fields library
+	 *
+	 * @since      1.0.0
+	 */
+	function load_carbon_fields() {
+		\Carbon_Fields\Carbon_Fields::boot();
+	}
 }
