@@ -97,6 +97,8 @@ class Foundations_Shortcodes {
 				__( '- total amount collected by selling this product: %s', 'foundations' ) . '<br/>',
 				wc_price( $product_contribution )
 			);
+		} else {
+			$message .= __( '- be first to contribute by ordering this product', 'foundations' ) . '<br/>';
 		}
 
 		if ( $total_sold > 0 ) {
@@ -105,7 +107,9 @@ class Foundations_Shortcodes {
 				__( '- total amount collected from all orders: %s.', 'foundations' ),
 				wc_price( $total_sold )
 			);
-		} 
+		} else {
+			$message .= __( '- organization did not raised any money yet. Be their hero!', 'foundations' );
+		}
 
 		$message .= '</p>';
 
