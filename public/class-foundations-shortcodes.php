@@ -63,9 +63,14 @@ class Foundations_Shortcodes {
 	public function product_detail_contribution_text_shortcode() {
 		global $post;
 
-		$product = wc_get_product( $post->ID );
+		$product      = wc_get_product( $post->ID );
+		$product_cost = $this->helper->get_product_cost( $post->ID );
 
-		$price         = $product->get_price() - get_post_meta( $post->ID, 'foundation_contribution', true );
+		$price = 0;
+		if ( 0.0 !== $product_cost ) {
+			$price = $product->get_price() - $product_cost;
+		}
+
 		$foundation_id = get_post_meta( $post->ID, 'foundation_id', true );
 		$foundation    = get_post( $foundation_id );
 

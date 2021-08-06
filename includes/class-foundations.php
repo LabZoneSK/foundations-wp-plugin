@@ -151,6 +151,7 @@ class Foundations {
 		$this->loader->add_action( 'woocommerce_process_product_meta', $plugin_admin, 'foundations_save_product_metadata' );
 
 		/** Settings */
+		$this->loader->add_action( 'carbon_fields_register_fields', $plugin_admin, 'register_carbon_fields_in_admin' );
 		$this->loader->add_action( 'carbon_fields_register_fields', $plugin_settings, 'add_settings_page' );
 
 		/* Foundations Post Type */

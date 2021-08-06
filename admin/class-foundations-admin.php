@@ -9,6 +9,9 @@
  * @subpackage Foundations/admin
  */
 
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
 /**
  * The admin-specific functionality of the plugin.
  *
@@ -176,7 +179,33 @@ class Foundations_Admin {
 	 *
 	 * @since      1.0.0
 	 */
-	function load_carbon_fields() {
+	public function load_carbon_fields() {
 		\Carbon_Fields\Carbon_Fields::boot();
 	}
+
+	/**
+	 * Registers Caron fields
+	 *
+	 * @since      1.0.0
+	 */
+	public function register_carbon_fields_in_admin() {
+		$this->register_category_term_additional_fields();
+	}
+
+	/**
+	 * Register fields for Category term
+	 *
+	 * @since      1.0.0
+	 */
+	public function register_category_term_additional_fields() {
+		Container::make( 'term_meta', __( 'Term Options', 'foundations' ) )
+		->where( 'term_taxonomy', '=', 'product_cat' )
+		->add_fields(
+			array(
+				Field::make( 'text', 'foundation_category_cost', __( 'Product cost', 'foundations' ) )
+				->set_width( 10 ),
+			)
+		);
+	}
+
 }

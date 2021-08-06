@@ -48,6 +48,8 @@ class Foundations_Public {
 	 */
 	public function __construct( $plugin_name, $version ) {
 
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-foundations-helper.php';
+
 		$this->plugin_name = $plugin_name;
 		$this->version     = $version;
 
@@ -136,7 +138,8 @@ class Foundations_Public {
 			$foundation_id = get_post_meta( $product->get_id(), 'foundation_id', true );
 			$quantity      = $values['quantity'];
 			$price         = $product->get_price();
-			$contribution  = $quantity * ( floatval( $price ) - floatval( get_post_meta( $product->get_id(), 'foundation_contribution', true ) ) );
+			$product_cost  = Foundations_Helper::get_product_cost( $product->get_id() );
+			$contribution  = $quantity * ( floatval( $price ) - $product_cost );
 
 			$foundations_contributions[ $foundation_id ] = ( isset( $foundations_contributions[ $foundation_id ] ) ) ? ( $foundations_contributions[ $foundation_id ] + $contribution ) : $contribution;
 		}

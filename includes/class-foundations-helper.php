@@ -41,7 +41,7 @@ class Foundations_Helper {
 			foreach ( $order->get_items() as $item_id => $item ) {
 				$product_id              = $item->get_product_id();
 				$foundation_id           = get_post_meta( $product_id, 'foundation_id', true );
-				$foundation_contribution = get_post_meta( $product_id, 'foundation_contribution', true );
+				$foundation_contribution = self::get_product_cost( $product_id );
 				$contribute_all          = get_post_meta( $product_id, 'foundation_contribute_all', true );
 				$total_price             = $item->get_total();
 				$quantity                = $item->get_quantity();
@@ -109,5 +109,31 @@ class Foundations_Helper {
 			$total_collected += $this->get_foundation_contribution( $data, $foundation_id );
 		}
 		return $total_collected;
+	}
+
+	/**
+	 * Returns costs for the product.
+	 *
+	 * Costs are taken from product meta data or from associated product category.
+	 *
+	 * @param int $product_id Product ID.
+	 * @return float Product cost.
+	 * @since      1.0.0
+	 */
+	public static function get_product_cost( $product_id ) {
+		$product_cost = floatval( get_post_meta( $product_id, 'foundation_contribution', true ) );
+
+		if ( 0.0 !== $product_cost ) {
+			return floatval( $product_cost );
+		}
+
+		$terms         = get_the_terms( $product_id, 'product_cat' );
+		$category_cost = carbon_get_term_meta( $terms[0]->term_id, 'foundation_category_cost' );
+
+		if ( 0.0 !== $category_cost ) {
+			return floatval( $category_cost );
+		}
+
+		return 0.0;
 	}
 }
