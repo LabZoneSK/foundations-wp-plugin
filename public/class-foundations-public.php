@@ -135,8 +135,9 @@ class Foundations_Public {
 			$product       = wc_get_product( $values['data']->get_id() );
 			$foundation_id = get_post_meta( $product->get_id(), 'foundation_id', true );
 			$quantity      = $values['quantity'];
+			$price         = $product->get_price();
+			$contribution  = $quantity * ( floatval( $price ) - floatval( get_post_meta( $product->get_id(), 'foundation_contribution', true ) ) );
 
-			$contribution                                = $quantity * floatval( get_post_meta( $product->get_id(), 'foundation_contribution', true ) );
 			$foundations_contributions[ $foundation_id ] = ( isset( $foundations_contributions[ $foundation_id ] ) ) ? ( $foundations_contributions[ $foundation_id ] + $contribution ) : $contribution;
 		}
 
